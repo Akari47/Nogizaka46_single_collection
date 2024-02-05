@@ -1,0 +1,11 @@
+div.header{
+    color: blue;
+}
+div.leftbar{
+    color: blue;
+    width:25%;
+}
+div.content{
+    color: blue;
+    margin-left:25%
+}
