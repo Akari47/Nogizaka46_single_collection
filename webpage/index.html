@@ -11,8 +11,7 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <script src="../script/1.js"></script>
-        <div class="header">
+        <div id="header">
             <center>
                 <div >乃木坂46</div>
                 <h1>Nogizaka46</h1>
@@ -20,18 +19,42 @@
                 <hr>
             </center>
         </div>
-        <div class="leftbar">
+        <div id="leftbar">
             <div>
+                <div align = "right">
+                    <button onclick="leftbar_close()">close</button>
+                </div>
                 <center>
-                    This is left bar
+                    <a href="../webpage/index.html">Home<a><br>
+                    <a href="../webpage/about.html">About</a>
                 </center>
             </div>
         </div>
-        <div class="content">
+        <div id="content">
+            <button onclick="leftbar_open()">open</button>
             <center>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/s1cgEj5JowM?si=ptPfWg7RfZnffuAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
             </center>
-            nice
+            <table class="single">
+                <thead>
+                    <th>No.</th>
+                    <th>type-A</th>
+                    <th>type-B</th>
+                    <th>type-C</th>
+                    <th>Regular</th>
+                </thead>
+                    <tr>
+                        <td><center>1</center></td>
+                        <td><center><img src="../image/single/1A.jpg" class="single_pic"></center></td>
+                        <td><center><img src="../image/single/1B.jpg" class="single_pic"></center></td>
+                        <td><center><img src="../image/single/1C.jpg" class="single_pic"></center></td>
+                        <td><center><img src="../image/single/1R.jpg" class="single_pic"></center></td>
+                    </tr>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
+        <script src="../script/1.js"></script>
     </body>
 </html>
