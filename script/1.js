@@ -2,7 +2,7 @@ const images = document.querySelectorAll("img")
 images.forEach(image => {image.draggable = false})
 
 const popup_window = document.getElementById("popup")
-const popup_text_div = document.getElementById("popup_text")
+const popup_spotify_div = document.getElementById("popup_spotify")
 
 const spotify_url = [
     {"id": 1, "url": "https://open.spotify.com/embed/track/3oay79erf6O3Lk0Cy5aulc?utm_source=generator"},
@@ -46,30 +46,26 @@ function popup_data(single){
     popup_now = single
     const Url = spotify_url[single-1].url
     const iframe = document.createElement('iframe')
-    iframe.style.borderRadius = '12px'
     iframe.src = Url
-    iframe.width = '100%'
-    iframe.height = '500'
     iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
     iframe.loading = 'lazy'
-    popup_text_div.appendChild(iframe)
+    popup_spotify_div.appendChild(iframe)
 }
 let popup_status = false
 function popup_appear(single){
     if (popup_status == false){
-        popup_window.style.display ="inline-block"
+        popup_window.style.display ="flex"
         popup_data(single)
     }
     else if(popup_now != single){
         popup_disappear()
-        popup_window.style.display ="inline-block"
-        popup_data(single)
+        popup_appear(single)
     }
     popup_status = true
 }
 
 function popup_disappear(){
     popup_window.style.display ="none"
-    popup_text_div.innerHTML =''
+    popup_spotify_div.innerHTML =''
     popup_status = false
 }

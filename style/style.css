@@ -73,10 +73,16 @@ div.frame img:hover{
 }
 
 div#popup{
-    height: 500px;
-    width: 809px;
-    background-color: white;
     display: none;
+    position: relative;
+    height: 353px;
+    width: 724px;
+    border: 10px;
+    border-radius: 14px;
+    border-color: black;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
     z-index: 1;
     position: fixed;
     top: 50%;
@@ -84,19 +90,46 @@ div#popup{
     transform: translate(-50%, -50%);
 }
 div#popup_x{
+    position: absolute;
+    top: 0;
+    right: 0;
     color: black;
+    background-color: transparent;
     text-align: right;
     padding: 0;
-    margin-right: 5px;
+    margin: 0;
     cursor: default;
+    width: 100%;
+    height: 5%;
+    z-index: 1;
 }
-div#popup_text{
-    color: black;
-    font-size: 50px;
+div#popup_x span{
+    position: absolute;
+    right: 5px;
 }
-
 div#popup_x:hover{
     color: lightgray;
+}
+div#popup_innerframe{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div#popup_spotify{
+    padding: 0;
+    width: 724px;
+    height: 353px;
+}
+div#popup_spotify iframe{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
 img.single_pic{
