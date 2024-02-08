@@ -13,12 +13,15 @@ hr.line{
     border-color: orchid;
 }
 
+div#navigation_bar{
+    background-color: white;
+    overflow: hidden;
+}
 a.navigation_button{
     padding: 20px;
     color: orchid;
 }
 ul{
-    overflow: hidden;
     margin: 0;
     padding: 0;
     background-color: white;
@@ -42,18 +45,58 @@ ul li a.navigation_button{
 
 div#gallery{
     font-size: 0;
+    overflow: hidden;
 }
 div.frame{
+    position: relative;
     display: inline;
     margin: 0;
     padding: 0;
     border-collapse: collapse;
     height: 12.5%;
     width: 12.5%;
+    overflow: hidden;
 }
 div.frame img{
     height: 12.5%;
     width: 12.5%;
+    opacity: 25%;
+    filter: blur(2px);
+    transition-property: transform, opacity, filter;
+    transition-duration: 1s, 5s, 1s;
+}
+div.frame img:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+    filter: blur(0px);
+    transition-duration: 0.5s;
+}
+
+div#popup{
+    height: 500px;
+    width: 809px;
+    background-color: white;
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div#popup_x{
+    color: black;
+    text-align: right;
+    padding: 0;
+    margin-right: 5px;
+    cursor: default;
+}
+div#popup_text{
+    color: black;
+    font-size: 50px;
+}
+
+div#popup_x:hover{
+    color: lightgray;
 }
 
 img.single_pic{
@@ -69,8 +112,4 @@ th{
 }
 thead{
     background-color: lightgray;
-}
-
-div.github-card{
-    color: black;
 }
