@@ -10,12 +10,15 @@ body{
 }
 hr.line{
     margin: 0;
-    border-color: orchid;
+    height: 1px;
+    border: none;
+    background-color: orchid;
 }
 
 div.navigation_bar{
     background-color: white;
     overflow: hidden;
+    border: 0;
 }
 ul.navigation_ul{
     overflow: hidden;
