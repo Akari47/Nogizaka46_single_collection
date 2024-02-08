@@ -1,5 +1,5 @@
 *{
-    font-family: 'Noto Serif JP', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 a{
     text-decoration: none;
@@ -161,4 +161,13 @@ th{
 }
 thead{
     background-color: lightgray;
+}
+
+div.about_content a{
+    color: orchid;
+    text-decoration: underline;
+}
+div.about_content a:visited{
+    color: orchid;
+    text-decoration: underline;
 }
