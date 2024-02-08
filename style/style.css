@@ -13,28 +13,41 @@ hr.line{
     border-color: orchid;
 }
 
-div#navigation_bar{
+div.navigation_bar{
     background-color: white;
     overflow: hidden;
 }
-a.navigation_button{
-    padding: 20px;
-    color: orchid;
-}
-ul{
+ul.navigation_ul{
+    overflow: hidden;
     margin: 0;
     padding: 0;
     background-color: white;
 }
+a.navigation_button{
+    display: inline;
+    padding: 20px;
+    color: orchid;
+}
 li{
     list-style: none;
+    float: left;
 }
-li a.navigation_button:hover{
-    background-color: blueviolet;
+li a.navigation_button_active{
+    background-color: orchid;
+    display: inline;
+    padding: 20px;
 }
-a.navigation_button:hover{
+a.navigation_button_active{
+    padding: 20px;
     color: white;
 }
+li a.navigation_button:hover{
+    background-color: lightgray;
+}
+a.navigation_button:hover{
+    color: orchid;
+}
+
 li.navigation_list{
     display: inline;
 }
